@@ -32,7 +32,7 @@ class CreateTransactionService {
 
     let category_id: string;
     if (!categoryRecord) {
-      const newCategory = categoryRepository.create({ title });
+      const newCategory = categoryRepository.create({ title: category });
       await categoryRepository.save(newCategory);
 
       category_id = newCategory.id;
